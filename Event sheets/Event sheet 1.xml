@@ -4,99 +4,7 @@
     <name>Event sheet 1</name>
     <events>
         <variable constant="0" name="Vidas" sid="7770198265657482" static="0" type="number">3</variable>
-        <event-block sid="921290587092855">
-            <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="108222178274797" type="Guarda">
-                    <param id="0" name="Instance variable">Walking</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="610760917271867" type="Guarda">
-                    <param id="0" name="Animation">&quot;Walking&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block any="1" sid="7391702084186261">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="4825784144401568" type="Guarda">
-                            <param id="0" name="Object">Virador</param>
-                        </condition>
-                        <condition id="0" name="On collision with another object" sid="8830440928320584" type="Guarda">
-                            <param id="0" name="Object">Guarda</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="9658489158232992" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="404055703592519">
-                    <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="5055386156856546" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="9648013011542121" type="Guarda">
-                            <param id="0" name="Control">1</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="7158112756889626" type="Guarda">
-                            <param id="0" name="State">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="1941089096139427">
-                    <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8391954171057585" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="4319784247525209" type="Guarda">
-                            <param id="0" name="Control">0</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="6688537007434368" type="Guarda">
-                            <param id="0" name="State">0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="3891463739726395">
-                    <conditions />
-                    <actions />
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="7069797008955832">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1005019117554752" type="Guarda">
-                    <param id="0" name="Instance variable">Walking</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="2369133427106687" type="Guarda">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="1919200358474935">
-                    <conditions>
-                        <condition id="0" name="On collision with another object" sid="3784380151782763" type="Guarda">
-                            <param id="0" name="Object">Heroi</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-13" name="Set boolean" sid="7933915662917355" type="Guarda">
-                            <param id="0" name="Instance variable">Walking</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-block>
-        <event-block sid="1114022043611889">
+        <event-block collapsed="1" sid="1114022043611889">
             <conditions>
                 <condition id="2" name="Is playing" sid="3780234562717859" type="Button">
                     <param id="0" name="Animation">&quot;Pressed&quot;</param>
@@ -165,7 +73,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="189169450653321">
+        <event-block collapsed="1" sid="189169450653321">
             <conditions>
                 <condition id="2" inverted="1" name="Is playing" sid="7589338087154185" type="Button">
                     <param id="0" name="Animation">&quot;Pressed&quot;</param>
@@ -195,7 +103,7 @@
                 </event-block>
             </sub-events>
         </event-block>
-        <event-block sid="8553757874145064">
+        <event-block collapsed="1" sid="8553757874145064">
             <conditions>
                 <condition id="-8" name="Is boolean instance variable set" sid="4889508715110025" type="PlatformUpDown">
                     <param id="0" name="Instance variable">Moving</param>
@@ -293,116 +201,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="3088924314016492">
-            <conditions>
-                <condition behavior="Platform" id="0" name="Is moving" sid="9543867252701798" type="Heroi" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="7971707373068432" type="Heroi">
-                    <param id="0" name="Animation">&quot;Run&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="1272456846747776">
-            <conditions>
-                <condition behavior="Platform" id="7" name="On stopped" sid="7810297435969586" type="Heroi" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="6586426915432209" type="Heroi">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="5278945049075385">
-            <conditions>
-                <condition behavior="Platform" id="3" name="Is jumping" sid="9084963437944763" type="Heroi" />
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="2902392472229951" type="Heroi">
-                    <param id="0" name="Animation">&quot;Jump&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="3643823457546678">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="866702703172635" type="Guarda">
-                    <param id="0" name="Object">Heroi</param>
-                </condition>
-            </conditions>
-            <actions />
-            <sub-events>
-                <event-block sid="5854778324584433">
-                    <conditions>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="7520555302824003" type="Heroi" />
-                    </conditions>
-                    <actions>
-                        <action id="-14" name="Toggle boolean" sid="1289019454041273" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="2069115251023898">
-                    <conditions>
-                        <condition id="-2" name="Compare Y" sid="2590773837949515" type="Heroi">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Guarda.Y - Guarda.Height / 1.8</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-12" name="Subtract from" sid="7488822896907043" type="Guarda">
-                            <param id="0" name="Instance variable">Life</param>
-                            <param id="1" name="Value">Heroi.Height / 24</param>
-                        </action>
-                        <action behavior="Platform" id="9" name="Set vector Y" sid="3821387733661194" type="Heroi">
-                            <param id="0" name="Vector Y">-350.0</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="3340362348824791" type="Guarda">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1.0</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="9488766841520962">
-                    <conditions>
-                        <condition id="-2" inverted="1" name="Compare Y" sid="9687744604774683" type="Heroi">
-                            <param id="0" name="Comparison">2</param>
-                            <param id="1" name="Y co-ordinate">Guarda.Y - Guarda.Height / 1.8</param>
-                        </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="609519393287329" type="Heroi" />
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="5512638750938377" type="System">
-                            <param id="0" name="Variable">Vidas</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="3551950157307589" type="Heroi">
-                            <param id="0" name="&apos;On&apos; time">0.1</param>
-                            <param id="1" name="&apos;Off&apos; time">0.1</param>
-                            <param id="2" name="Duration">1</param>
-                        </action>
-                    </actions>
-                    <sub-events>
-                        <event-block sid="8245048515591237">
-                            <conditions>
-                                <condition id="-1" name="Compare X" sid="994599632323204" type="Heroi">
-                                    <param id="0" name="Comparison">2</param>
-                                    <param id="1" name="X co-ordinate">Guarda.X</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action behavior="Platform" id="8" name="Set vector X" sid="5900450715636055" type="Heroi">
-                                    <param id="0" name="Vector X">-50</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
-        </event-block>
         <event-block sid="1028554959483851">
             <conditions>
                 <condition id="-1" name="Every tick" sid="1708513602781417" type="System" />
@@ -411,18 +209,6 @@
                 <action id="-5" name="Set width" sid="7722456906380397" type="ContaVidas">
                     <param id="0" name="Width">Vidas*32</param>
                 </action>
-            </actions>
-        </event-block>
-        <event-block sid="3186677872456138">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="4012575461649821" type="Guarda">
-                    <param id="0" name="Instance variable">Life</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="8550977105539114" type="Guarda" />
             </actions>
         </event-block>
         <event-block sid="3971068727513732">
@@ -453,123 +239,506 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="2809707687077164">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1144296621528041" type="Heroi">
-                    <param id="0" name="Object">GuardaView</param>
-                </condition>
-                <condition id="1" name="Is overlapping another object" sid="7997914791025133" type="Guarda">
-                    <param id="0" name="Object">GuardaView</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="9802319931781161" type="Guarda">
-                    <param id="0" name="Instance variable">Walking</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
+        <event-group collapsed="1" description="" sid="2095320465219648" title="Heroi">
             <sub-events>
-                <event-block sid="6338222633054101">
+                <event-block sid="9308405886455477">
                     <conditions>
-                        <condition id="-1" name="Compare X" sid="967954198053579" type="Guarda">
-                            <param id="0" name="Comparison">4</param>
-                            <param id="1" name="X co-ordinate">Heroi.X</param>
+                        <condition id="0" name="On collision with another object" sid="5719001748814729" type="Heroi">
+                            <param id="0" name="Object">GrowBig</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-13" name="Set boolean" sid="3012318252092338" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
-                            <param id="1" name="Value">0</param>
+                        <action id="9" name="Set scale" sid="7212672596489693" type="Heroi">
+                            <param id="0" name="Scale">4</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="3551173399080691" type="GrowBig" />
+                        <action id="-9" name="Set value" sid="6753339478408233" type="System">
+                            <param id="0" name="Variable">Vidas</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="6673758424676587">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1027134443075894" type="Heroi">
+                            <param id="0" name="Object">ResetSize</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="3819791275543485" type="ResetSize" />
+                        <action id="9" name="Set scale" sid="8708313191225704" type="Heroi">
+                            <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3088924314016492">
+                    <conditions>
+                        <condition behavior="Platform" id="0" name="Is moving" sid="9543867252701798" type="Heroi" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="7971707373068432" type="Heroi">
+                            <param id="0" name="Animation">&quot;Run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="1272456846747776">
+                    <conditions>
+                        <condition behavior="Platform" id="7" name="On stopped" sid="7810297435969586" type="Heroi" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="6586426915432209" type="Heroi">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="5278945049075385">
+                    <conditions>
+                        <condition behavior="Platform" id="3" name="Is jumping" sid="9084963437944763" type="Heroi" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="2902392472229951" type="Heroi">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="8305862598784987">
-            <conditions>
-                <condition id="1" name="Is overlapping another object" sid="7358871723618909" type="Guarda">
-                    <param id="0" name="Object">GuardaView</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-2" name="Set Y" sid="1502845572058073" type="GuardaView">
-                    <param id="0" name="Y">Guarda.Y</param>
-                </action>
-            </actions>
+        </event-group>
+        <event-group collapsed="1" description="" sid="3932447787789766" title="Guarda">
             <sub-events>
-                <event-block sid="9442890352885853">
+                <event-block collapsed="1" sid="921290587092855">
                     <conditions>
-                        <condition id="-8" name="Is boolean instance variable set" sid="6592953944562855" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
+                        <condition id="-8" name="Is boolean instance variable set" sid="108222178274797" type="Guarda">
+                            <param id="0" name="Instance variable">Walking</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="5415037556407136" type="GuardaView">
-                            <param id="0" name="X">Guarda.X + 15</param>
+                        <action id="4" name="Set animation" sid="610760917271867" type="Guarda">
+                            <param id="0" name="Animation">&quot;Walking&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
+                    <sub-events>
+                        <event-block any="1" sid="7391702084186261">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="4825784144401568" type="Guarda">
+                                    <param id="0" name="Object">Virador</param>
+                                </condition>
+                                <condition id="0" name="On collision with another object" sid="8830440928320584" type="Guarda">
+                                    <param id="0" name="Object">Guarda</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="9658489158232992" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="404055703592519">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="5055386156856546" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="9648013011542121" type="Guarda">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="7158112756889626" type="Guarda">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1941089096139427">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="8391954171057585" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="4319784247525209" type="Guarda">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                                <action id="7" name="Set mirrored" sid="6688537007434368" type="Guarda">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3891463739726395">
+                            <conditions />
+                            <actions />
+                        </event-block>
+                    </sub-events>
                 </event-block>
-                <event-block sid="3764007884810661">
+                <event-block collapsed="1" sid="7069797008955832">
                     <conditions>
-                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5734931408117073" type="Guarda">
-                            <param id="0" name="Instance variable">WalkRight</param>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="1005019117554752" type="Guarda">
+                            <param id="0" name="Instance variable">Walking</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-1" name="Set X" sid="2520653550747539" type="GuardaView">
-                            <param id="0" name="X">Guarda.X - 15</param>
+                        <action id="4" name="Set animation" sid="2369133427106687" type="Guarda">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1919200358474935">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="3784380151782763" type="Guarda">
+                                    <param id="0" name="Object">Heroi</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="7933915662917355" type="Guarda">
+                                    <param id="0" name="Instance variable">Walking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="3643823457546678">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="866702703172635" type="Guarda">
+                            <param id="0" name="Object">Heroi</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="5854778324584433">
+                            <conditions>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="7520555302824003" type="Heroi" />
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="1289019454041273" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2069115251023898">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="2590773837949515" type="Heroi">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Guarda.Y - Guarda.Height / 1.8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="7488822896907043" type="Guarda">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">Heroi.Height / 24</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="3821387733661194" type="Heroi">
+                                    <param id="0" name="Vector Y">-350.0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="3340362348824791" type="Guarda">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9488766841520962">
+                            <conditions>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="9687744604774683" type="Heroi">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">Guarda.Y - Guarda.Height / 1.8</param>
+                                </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="609519393287329" type="Heroi" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="5512638750938377" type="System">
+                                    <param id="0" name="Variable">Vidas</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="3551950157307589" type="Heroi">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8245048515591237">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="994599632323204" type="Heroi">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Guarda.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="5900450715636055" type="Heroi">
+                                            <param id="0" name="Vector X">-50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3186677872456138">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4012575461649821" type="Guarda">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8550977105539114" type="Guarda" />
+                    </actions>
+                </event-block>
+                <event-block collapsed="1" sid="2809707687077164">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="1144296621528041" type="Heroi">
+                            <param id="0" name="Object">GuardaView</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="7997914791025133" type="Guarda">
+                            <param id="0" name="Object">GuardaView</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="9802319931781161" type="Guarda">
+                            <param id="0" name="Instance variable">Walking</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="6338222633054101">
+                            <conditions>
+                                <condition id="-1" name="Compare X" sid="967954198053579" type="Guarda">
+                                    <param id="0" name="Comparison">4</param>
+                                    <param id="1" name="X co-ordinate">Heroi.X</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-13" name="Set boolean" sid="3012318252092338" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block collapsed="1" sid="8305862598784987">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="7358871723618909" type="Guarda">
+                            <param id="0" name="Object">GuardaView</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="1502845572058073" type="GuardaView">
+                            <param id="0" name="Y">Guarda.Y</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="9442890352885853">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="6592953944562855" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="5415037556407136" type="GuardaView">
+                                    <param id="0" name="X">Guarda.X + 15</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="3764007884810661">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="5734931408117073" type="Guarda">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-1" name="Set X" sid="2520653550747539" type="GuardaView">
+                                    <param id="0" name="X">Guarda.X - 15</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="6164866523171627">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="4574110586317456" type="Heroi">
+                            <param id="0" name="Object">StartWalking</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="9454426278591488" type="Guarda">
+                            <param id="0" name="Instance variable">Id</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">StartWalking.Id</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set boolean" sid="8001600802794002" type="Guarda">
+                            <param id="0" name="Instance variable">Walking</param>
+                            <param id="1" name="Value">1</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
-        </event-block>
-        <event-block sid="6164866523171627">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="4574110586317456" type="Heroi">
-                    <param id="0" name="Object">StartWalking</param>
-                </condition>
-                <condition id="-7" name="Compare instance variable" sid="9454426278591488" type="Guarda">
-                    <param id="0" name="Instance variable">Id</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">StartWalking.Id</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-13" name="Set boolean" sid="8001600802794002" type="Guarda">
-                    <param id="0" name="Instance variable">Walking</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="9308405886455477">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="5719001748814729" type="Heroi">
-                    <param id="0" name="Object">GrowBig</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="9" name="Set scale" sid="7212672596489693" type="Heroi">
-                    <param id="0" name="Scale">4</param>
-                </action>
-                <action id="-9" name="Destroy" sid="3551173399080691" type="GrowBig" />
-                <action id="-9" name="Set value" sid="6753339478408233" type="System">
-                    <param id="0" name="Variable">Vidas</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="6673758424676587">
-            <conditions>
-                <condition id="0" name="On collision with another object" sid="1027134443075894" type="Heroi">
-                    <param id="0" name="Object">ResetSize</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="3819791275543485" type="ResetSize" />
-                <action id="9" name="Set scale" sid="8708313191225704" type="Heroi">
-                    <param id="0" name="Scale">1</param>
-                </action>
-            </actions>
-        </event-block>
+        </event-group>
+        <event-group collapsed="1" description="" sid="4642227387959979" title="GuardaRobo">
+            <sub-events>
+                <event-block any="1" sid="1589797581949198">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="9816870160054832" type="GuardaRobo">
+                            <param id="0" name="Object">Virador</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-14" name="Toggle boolean" sid="2199064156423571" type="GuardaRobo">
+                            <param id="0" name="Instance variable">WalkRight</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="10575566552735">
+                    <conditions>
+                        <condition id="-8" name="Is boolean instance variable set" sid="6493586190699385" type="GuardaRobo">
+                            <param id="0" name="Instance variable">WalkRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="1138874117791526" type="GuardaRobo">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="7027540266550781" type="GuardaRobo">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7974390126941741">
+                    <conditions>
+                        <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="2878278093072905" type="GuardaRobo">
+                            <param id="0" name="Instance variable">WalkRight</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="795112271815349" type="GuardaRobo">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="593064811501414" type="GuardaRobo">
+                            <param id="0" name="State">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="7516580956008256">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="3767356384351867" type="Heroi">
+                            <param id="0" name="Instance variable">GoingLeft</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="3186925250153041" type="Heroi">
+                            <param id="0" name="Vector X">-8000</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="3784213553255348" type="Heroi">
+                            <param id="0" name="Instance variable">GoingLeft</param>
+                            <param id="1" name="Value">Heroi.GoingLeft - 1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="3643823457546678">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="866702703172635" type="GuardaRobo">
+                            <param id="0" name="Object">Heroi</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="8" name="Set vector X" sid="7213789537593707" type="Heroi">
+                            <param id="0" name="Vector X">-4000</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="8744691479073099" type="Heroi">
+                            <param id="0" name="Instance variable">GoingLeft</param>
+                            <param id="1" name="Value">20</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="5854778324584433">
+                            <conditions>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="7520555302824003" type="Heroi" />
+                            </conditions>
+                            <actions>
+                                <action id="-14" name="Toggle boolean" sid="1289019454041273" type="GuardaRobo">
+                                    <param id="0" name="Instance variable">WalkRight</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="2069115251023898">
+                            <conditions>
+                                <condition id="-2" name="Compare Y" sid="2590773837949515" type="Heroi">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">GuardaRobo.Y - GuardaRobo.Height / 1.8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-12" name="Subtract from" sid="7488822896907043" type="GuardaRobo">
+                                    <param id="0" name="Instance variable">Life</param>
+                                    <param id="1" name="Value">Heroi.Height / 24</param>
+                                </action>
+                                <action behavior="Platform" id="9" name="Set vector Y" sid="3821387733661194" type="Heroi">
+                                    <param id="0" name="Vector Y">-350.0</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="3340362348824791" type="GuardaRobo">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="9488766841520962">
+                            <conditions>
+                                <condition id="-2" inverted="1" name="Compare Y" sid="9687744604774683" type="Heroi">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Y co-ordinate">GuardaRobo.Y - GuardaRobo.Height / 1.8</param>
+                                </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="609519393287329" type="Heroi" />
+                            </conditions>
+                            <actions>
+                                <action id="-11" name="Subtract from" sid="5512638750938377" type="System">
+                                    <param id="0" name="Variable">Vidas</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="3551950157307589" type="Heroi">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="8245048515591237">
+                                    <conditions>
+                                        <condition id="-1" name="Compare X" sid="994599632323204" type="Heroi">
+                                            <param id="0" name="Comparison">2</param>
+                                            <param id="1" name="X co-ordinate">Guarda.X</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Platform" id="8" name="Set vector X" sid="5900450715636055" type="Heroi">
+                                            <param id="0" name="Vector X">-50</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="3186677872456138">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="4012575461649821" type="GuardaRobo">
+                            <param id="0" name="Instance variable">Life</param>
+                            <param id="1" name="Comparison">3</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="8550977105539114" type="GuardaRobo" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
