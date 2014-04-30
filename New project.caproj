@@ -36,14 +36,14 @@
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
         <prop name="Enable WebGL">On</prop>
-        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen in browser">Letterbox integer scale</prop>
         <prop name="Fullscreen scaling">High quality</prop>
         <prop name="Loader style">Progress bar &amp; logo</prop>
         <prop name="Orientations">Any</prop>
         <prop name="Pause on unfocus">No</prop>
         <prop name="Physics engine">Box2D web</prop>
         <prop name="Preview browser">(default)</prop>
-        <prop name="Sampling">Linear</prop>
+        <prop name="Sampling">Point</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder expanded="1">
@@ -509,13 +509,81 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PlatformLeftRight" sid="2202557826958136">
+            <plugin id="NinePatch" />
+            <behaviors>
+                <behavior-type name="Sine" sid="1688080223400204">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Jumpthru" sid="2265731716659705">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <texture />
+        </object-type>
+        <object-type name="Barril" sid="5138394341993041">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="GoingRight" sid="1803647661098602" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Platform" sid="3586596765902142">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="7030092430599326" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.15625" y="0.148438" />
+                            <point x="0.480469" y="0" />
+                            <point x="0.84375" y="0.153646" />
+                            <point x="0.9375" y="0.5" />
+                            <point x="0.835938" y="0.825521" />
+                            <point x="0.5" y="1" />
+                            <point x="0.148438" y="0.851562" />
+                            <point x="0.0078125" y="0.507813" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PonteJumpThrough" sid="3851605260193138">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Jumpthru" sid="8494916291496928">
+                    <behavior id="jumpthru" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="568710721973224" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Background" sid="2303242993620141">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="background2" sid="2923189692438309">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="ResetLevel2" sid="2671515142610763">
+            <plugin id="Sprite" />
+            <animation-folder expanded="1">
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="3072356429228064" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder expanded="1">
         <layout>Layout 1.xml</layout>
         <layout>Layout 2.xml</layout>
     </layout-folder>
-    <event-folder expanded="1">
+    <event-folder expanded="0">
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
     <global-instances>
