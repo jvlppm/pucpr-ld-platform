@@ -4,6 +4,31 @@
     <name>Event sheet 1</name>
     <events>
         <variable constant="0" name="Vidas" sid="7770198265657482" static="0" type="number">3</variable>
+        <event-block sid="367099009874015">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="4558880156066982" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="4492442349128514" type="System">
+                    <param id="0" name="Variable">Vidas</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-10" name="Set value" sid="4836187653059913" type="PlatformDescend">
+                    <param id="0" name="Instance variable">InitialY</param>
+                    <param id="1" name="Value">PlatformDescend.Y</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="1028554959483851">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="1708513602781417" type="System" />
+            </conditions>
+            <actions>
+                <action id="-5" name="Set width" sid="7722456906380397" type="ContaVidas">
+                    <param id="0" name="Width">Vidas*32</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block collapsed="1" sid="1114022043611889">
             <conditions>
                 <condition id="2" name="Is playing" sid="3780234562717859" type="Button">
@@ -201,16 +226,6 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="1028554959483851">
-            <conditions>
-                <condition id="-1" name="Every tick" sid="1708513602781417" type="System" />
-            </conditions>
-            <actions>
-                <action id="-5" name="Set width" sid="7722456906380397" type="ContaVidas">
-                    <param id="0" name="Width">Vidas*32</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="3971068727513732">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="3989012770999665" type="System">
@@ -235,7 +250,7 @@
                 </action>
             </actions>
         </event-block>
-        <event-group description="" sid="9010946522144971" title="Barril">
+        <event-group collapsed="1" description="" sid="9010946522144971" title="Barril">
             <sub-events>
                 <event-block sid="6812815651735033">
                     <conditions>
@@ -370,7 +385,7 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="2095320465219648" title="Heroi">
+        <event-group collapsed="1" description="" sid="2095320465219648" title="Heroi">
             <sub-events>
                 <event-block sid="9308405886455477">
                     <conditions>
@@ -456,9 +471,56 @@
                         <action id="-26" name="Restart layout" sid="7836252991314363" type="System" />
                     </actions>
                 </event-block>
+                <event-block collapsed="1" sid="8074946778774375">
+                    <conditions>
+                        <condition id="-6" name="Compare height" sid="5212971776460031" type="Heroi">
+                            <param id="0" name="Comparison">3</param>
+                            <param id="1" name="Height">40</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="2253126409631887">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="2825833702487964" type="Heroi">
+                                    <param id="0" name="Object">Water</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="1478790530841009" type="Heroi">
+                                    <param id="0" name="Jump strength">500</param>
+                                </action>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="2958013343723346" type="Heroi">
+                                    <param id="0" name="Max fall speed">100</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="8310339991733566" type="Heroi">
+                                    <param id="0" name="Max Speed">65</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="21817474860003">
+                            <conditions>
+                                <condition id="1" inverted="1" name="Is overlapping another object" sid="1261306319688543" type="Heroi">
+                                    <param id="0" name="Object">Water</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="653438608293688" type="Heroi">
+                                    <param id="0" name="Jump strength">350</param>
+                                </action>
+                                <action behavior="Platform" id="6" name="Set max fall speed" sid="7715787151258122" type="Heroi">
+                                    <param id="0" name="Max fall speed">1000</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="1449807759697072" type="Heroi">
+                                    <param id="0" name="Max Speed">130</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="3932447787789766" title="Guarda">
+        <event-group collapsed="1" description="" sid="3932447787789766" title="Guarda">
             <sub-events>
                 <event-block collapsed="1" sid="921290587092855">
                     <conditions>
@@ -944,16 +1006,99 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="367099009874015">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="4558880156066982" type="System" />
-            </conditions>
-            <actions>
-                <action id="-9" name="Set value" sid="4492442349128514" type="System">
-                    <param id="0" name="Variable">Vidas</param>
-                    <param id="1" name="Value">3</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="7566320703499452" title="Plataformas">
+            <sub-events>
+                <event-block sid="1514462162659213">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="9031562162528102" type="Heroi">
+                            <param id="0" name="Object">PlatformDescend</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">10</param>
+                        </condition>
+                        <condition id="-4" inverted="1" name="Is outside layout" sid="3573498568219501" type="PlatformDescend" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="4363933781051309" type="PlatformDescend">
+                            <param id="0" name="Instance variable">OffsetY</param>
+                            <param id="1" name="Value">16 * dt</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="1850479060086769" type="PlatformDescend">
+                            <param id="0" name="Animation">&quot;Descending&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="9929679676287955">
+                    <conditions>
+                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="8729948719186363" type="PlatformDescend">
+                            <param id="0" name="Object">Heroi</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">-10</param>
+                        </condition>
+                        <condition id="-4" name="Is outside layout" sid="1961211168638144" type="PlatformDescend" />
+                    </conditions>
+                    <actions>
+                        <action id="-11" name="Add to" sid="653593024813836" type="PlatformDescend">
+                            <param id="0" name="Instance variable">OffsetY</param>
+                            <param id="1" name="Value">16 * dt</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="7966942643551689" type="PlatformDescend">
+                            <param id="0" name="Animation">&quot;Descending&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="1726985375047628">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="9921539051253071" type="PlatformDescend">
+                                    <param id="0" name="Instance variable">OffsetY</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="7987133655896568" type="PlatformDescend">
+                                    <param id="0" name="Animation">&quot;Ascending&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-12" name="Subtract from" sid="5783286429629315" type="PlatformDescend">
+                                    <param id="0" name="Instance variable">OffsetY</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="1045200279720339">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="3272993649425274" type="PlatformDescend">
+                                    <param id="0" name="Instance variable">OffsetY</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="1491787729237645" type="PlatformDescend">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="3318530689842033" type="PlatformDescend">
+                                    <param id="0" name="Instance variable">OffsetY</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="665477597745792">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="9397147720308024" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Set Y" sid="459570771159002" type="PlatformDescend">
+                            <param id="0" name="Y">PlatformDescend.InitialY + PlatformDescend.OffsetY</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
