@@ -230,8 +230,8 @@
                 </condition>
             </conditions>
             <actions>
-                <action id="-2" name="Go to layout" sid="9808057886096755" type="System">
-                    <param id="0" name="Layout">Layout 2</param>
+                <action id="-25" name="Go to layout (by name)" sid="9808057886096755" type="System">
+                    <param id="0" name="Layout">Passagem.NextLayout</param>
                 </action>
             </actions>
         </event-block>
@@ -276,10 +276,20 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="8948065350683835">
+                <event-block any="1" sid="8948065350683835">
                     <conditions>
                         <condition id="0" name="On collision with another object" sid="4340894752547722" type="Guarda">
                             <param id="0" name="Object">Barril</param>
+                        </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="3717027196109515" type="Guarda">
+                            <param id="0" name="Object">Barril</param>
+                            <param id="1" name="Offset X">20</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="1144780988323461" type="Guarda">
+                            <param id="0" name="Object">Barril</param>
+                            <param id="1" name="Offset X">-20</param>
+                            <param id="2" name="Offset Y">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -295,6 +305,9 @@
                                 </condition>
                                 <condition id="-8" name="Is boolean instance variable set" sid="8327990117535948" type="Barril">
                                     <param id="0" name="Instance variable">GoingRight</param>
+                                </condition>
+                                <condition id="-8" name="Is boolean instance variable set" sid="9418762333278414" type="Guarda">
+                                    <param id="0" name="Instance variable">Walking</param>
                                 </condition>
                             </conditions>
                             <actions>
@@ -347,9 +360,17 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="2297454521335056">
+                    <conditions>
+                        <condition id="-4" name="Is outside layout" sid="8548051282956291" type="Barril" />
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="1409388506715601" type="Barril" />
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="2095320465219648" title="Heroi">
+        <event-group description="" sid="2095320465219648" title="Heroi">
             <sub-events>
                 <event-block sid="9308405886455477">
                     <conditions>
@@ -429,19 +450,15 @@
                 </event-block>
                 <event-block sid="176262273158376">
                     <conditions>
-                        <condition id="0" name="On collision with another object" sid="377220254009231" type="Heroi">
-                            <param id="0" name="Object">ResetLevel2</param>
-                        </condition>
+                        <condition id="-19" name="On destroyed" sid="377220254009231" type="Heroi" />
                     </conditions>
                     <actions>
-                        <action id="-2" name="Go to layout" sid="7836252991314363" type="System">
-                            <param id="0" name="Layout">Layout 2</param>
-                        </action>
+                        <action id="-26" name="Restart layout" sid="7836252991314363" type="System" />
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group collapsed="1" description="" sid="3932447787789766" title="Guarda">
+        <event-group description="" sid="3932447787789766" title="Guarda">
             <sub-events>
                 <event-block collapsed="1" sid="921290587092855">
                     <conditions>
@@ -923,7 +940,7 @@
                     <param id="0" name="Object to create">Barril</param>
                     <param id="1" name="Layer">1</param>
                     <param id="2" name="X">Guarda.X + 20</param>
-                    <param id="3" name="Y">Guarda.Y</param>
+                    <param id="3" name="Y">Guarda.Y + 10</param>
                 </action>
             </actions>
         </event-block>
